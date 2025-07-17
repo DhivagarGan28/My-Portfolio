@@ -141,7 +141,7 @@ li {
      height: auto;
      cursor: pointer;
 }
-.myprofileimgdiv{
+.myprofileimgdiv, .myprofileimgabtdiv{
      max-width: 400px;
      max-height: 400px;
 }
@@ -188,6 +188,7 @@ li {
      display: flex;
      align-content: center;
      align-items: center;
+     justify-content:center;
 }
 .skillsection{
      padding-bottom: 40px;
@@ -277,4 +278,226 @@ li {
 .company{
      font-family:  'JosefinSans-Regular';
      font-size: 14px;
+}
+@media screen and (max-width: 500px) {
+     .mylogoimg{
+          width: 35px;
+          height: 35px;
+     }
+     .glass-navbar{
+          padding:5px 20px;
+          align-items: center;
+          border-radius: 12px;
+     }
+     .nav-item{
+          font-size: 14px;
+     }
+     .MynameHead{
+          font-size: 30px;
+          padding-bottom: 15px;
+          background-image: url('../../public/images/banner_one.jpg');
+          background-repeat: no-repeat;
+          background-size: contain;
+          padding: 50px 0px 98px 15px;
+          font-size: 24px;
+          color: #000;
+     }
+     .mycontent{
+          font-size: 14px;
+          line-height: 20px;
+          padding-bottom: 15px;
+          padding-top: 24px;
+     }
+     .myprofileimgdiv{
+          display: none;
+          width: 200px;
+          height: 200px;
+     }
+     .mylocationcontent{
+          font-size: 14px;
+     }
+     .mylocationimg, .mysocialimg{
+          width: 16px;
+     }
+     .mylocation{
+          padding-bottom: 10px;
+     }
+     .aboutmeconthead{
+          font-size: 24px;
+     }
+     .aboutmecontentpg{
+          font-size: 14px;
+     }
+     .logosize{
+          width: 35px;
+     }
+     .skillheade{
+          font-size: 28px;
+     }
+     .content{
+          flex-direction: column;
+          padding: 24px;
+          gap: 0px;
+     }
+     .personal{
+          width: 100%;
+     }
+     .aboutmecontdiv{
+          flex-direction: column;
+          padding: 24px;
+     }
+     .aboutmecontent{
+          width: 100%;
+     }
+     .mylogoimgfooter{
+          width: 35px;
+          height: 35px;
+     }
+     .developer{
+          font-size: 16px;
+     }
+     .LinkSection{
+          font-size: 12px;
+     }
+     .socialmedia{
+          width: 18px;
+     }
+}
+@media only screen and (min-width: 501px) and (max-width: 767px) {
+   .mylogoimg{
+          width: 35px;
+          height: 35px;
+     }
+     .glass-navbar{
+          padding:5px 20px;
+          align-items: center;
+          border-radius: 12px;
+     }
+     .nav-item{
+          font-size: 14px;
+     }
+     .MynameHead{
+          font-size: 30px;
+          padding-bottom: 15px;
+          background-image: url('../../public/images/banner_one.jpg');
+          background-repeat: no-repeat;
+          background-size: 100%;
+          padding: 50px 0px 98px 10px;
+          font-size: 24px;
+          color: #000;
+     }
+     .mycontent{
+          font-size: 14px;
+          line-height: 20px;
+          padding-bottom: 15px;
+          padding-top: 24px;
+     }
+     .myprofileimgdiv{
+          display: none;
+          width: 200px;
+          height: 200px;
+     }
+     .mylocationcontent{
+          font-size: 14px;
+     }
+     .mylocationimg, .mysocialimg{
+          width: 16px;
+     }
+     .mylocation{
+          padding-bottom: 10px;
+     }
+     .aboutmeconthead{
+          font-size: 24px;
+     }
+     .aboutmecontentpg{
+          font-size: 14px;
+     }
+     .logosize{
+          width: 35px;
+     }
+     .skillheade{
+          font-size: 28px;
+     }
+     .content{
+          flex-direction: column;
+          padding: 24px;
+          gap: 0px;
+     }
+     .personal{
+          width: 100%;
+     }
+     .aboutmecontdiv{
+          flex-direction: column;
+          padding: 24px;
+     }
+     .aboutmecontent{
+          width: 100%;
+     }
+     .mylogoimgfooter{
+          width: 35px;
+          height: 35px;
+     }
+     .developer{
+          font-size: 16px;
+     }
+     .LinkSection{
+          font-size: 12px;
+     }
+     .socialmedia{
+          width: 18px;
+     }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+     .mylogoimg{
+          width: 40px;
+          height: 40px;
+     }
+     .glass-navbar{
+          padding:5px 20px;
+          align-items: center;
+          border-radius: 12px;
+     }
+     .nav-item{
+          font-size: 14px;
+     }
+     .MynameHead{
+          font-size: 30px;
+          padding-bottom: 15px;
+     }
+     .mycontent{
+          font-size: 14px;
+          line-height: 20px;
+          padding-bottom: 15px;
+     }
+     .myprofileimgdiv, .myprofileimgabtdiv{
+          width: 200px;
+          height: 200px;
+     }
+     .mylocationcontent{
+          font-size: 14px;
+     }
+     .mylocationimg, .mysocialimg{
+          width: 16px;
+     }
+     .mylocation{
+          padding-bottom: 15px;
+     }
+     .aboutmeconthead{
+          font-size: 24px;
+     }
+     .aboutmecontentpg{
+          font-size: 14px;
+     }
+     .logosize{
+          width: 35px;
+     }
+     .skillheade{
+          font-size: 28px;
+     }
+}
+@media screen and (min-width: 1400px) {
+     .maincontainer{
+          max-width:1440px;
+          margin:auto;
+     }
 }

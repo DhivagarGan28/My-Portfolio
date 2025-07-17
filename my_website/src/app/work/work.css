@@ -1,0 +1,15 @@
+.work{
+     text-align: center;
+     padding: 24px;
+}
+.work_heading{
+     font-family:  'JosefinSans-Bold';
+     font-size: 28px;
+     font-weight: 500;
+     padding-bottom: 10px;
+}
+.headrole{
+     font-family:  'JosefinSans-Medium';
+     font-size: 20px;
+     padding: 10px;
+}
