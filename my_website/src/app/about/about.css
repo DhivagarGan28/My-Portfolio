@@ -1,0 +1,212 @@
+.glass-navbar {
+     background: rgba(255, 255, 255, 0.15);
+     backdrop-filter: blur(12px);
+     -webkit-backdrop-filter: blur(12px);
+     border: 1px solid rgba(255, 255, 255, 0.2);
+     border-radius: 16px;
+     padding: 10px 30px;
+     display: flex;
+     gap: 32px;
+     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+     position: relative;
+}
+
+.nav-item {
+     position: relative;
+     color: #1f2937;
+     text-decoration: none;
+     font-size: 16px;
+     font-weight: 500;
+     padding: 10px 0;
+     transition: color 0.3s ease;
+}
+
+.nav-item::after {
+     content: '';
+     position: absolute;
+     bottom: 0;
+     left: 50%;
+     height: 2px;
+     width: 0;
+     background-color: #4f46e5;
+     transition: 0.3s ease;
+     transform: translateX(-50%);
+}
+
+.nav-item:hover,
+.nav-item.active {
+     color: #4f46e5;
+}
+
+.nav-item:hover::after,
+.nav-item.active::after {
+     width: 50%;
+}
+
+.maincontainer{
+     background-color: #FFF;
+}
+.navbardiv{
+     padding: 10px;
+}
+.NavBar {
+     display: flex;
+}
+
+ul {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     overflow: hidden;
+     color: #000;
+     width: 100%;
+     height: 50px;
+     display: flex;
+     justify-content: flex-end;
+     align-items: center;
+     padding: 0px 20%;
+     gap: 20px;
+
+}
+
+li {
+     float: left;
+     font-family: 'JosefinSans-Regular';
+}
+
+.mylogoimg{
+     width: 50px;
+     height: 50px;
+     border-radius: 6px;
+}
+.mylogodiv{
+     padding-left: 3%;
+     display: flex;
+}
+.work{
+     text-align: center;
+     padding: 24px;
+}
+.work_heading{
+     font-family:  'JosefinSans-Bold';
+     font-size: 38px;
+     font-weight: 500;
+     padding-bottom: 10px;
+}
+.headrole{
+     font-family:  'JosefinSans-Medium';
+     font-size: 20px;
+     padding: 10px;
+}
+.workbanner{
+     width: 98%;
+     margin: auto;
+     border-radius: 6px;
+     padding: 24px 0px;
+}
+.WorkExpImg{
+     width: 100%;
+     height: auto;
+}
+.Projectdes{
+     font-family:  'JosefinSans-Regular';
+     font-size: 18px;
+     padding: 10px;
+     line-height: 150%;
+}
+
+@media screen and (max-width: 500px) {
+     .mylogoimg{
+          width: 35px;
+          height: 35px;
+     }
+     .glass-navbar{
+          padding:5px 20px;
+          align-items: center;
+          border-radius: 12px;
+     }
+     .nav-item{
+          font-size: 14px;
+     }
+     .Projectdes{
+          font-size: 14px;
+
+     }
+        .work_heading{
+          font-size: 28px;
+     }
+     .headrole{
+          font-size: 14px;
+     }
+     .company{
+          font-size: 12px;
+     }
+     .workbanner{
+          width: 95%;
+          padding: 12px 0px;
+     }
+}
+@media only screen and (min-width: 501px) and (max-width: 767px) {
+     .mylogoimg{
+          width: 35px;
+          height: 35px;
+     }
+     .glass-navbar{
+          padding:5px 20px;
+          align-items: center;
+          border-radius: 12px;
+     }
+     .nav-item{
+          font-size: 14px;
+     }
+     .workbanner{
+          width: 95%;
+     }
+     .Projectdes{
+          font-size: 12px;
+     }
+     .work_heading{
+          font-size: 28px;
+     }
+     .headrole{
+          font-size: 16px;
+     }
+     .company{
+          font-size: 14px;
+     }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+     .mylogoimg{
+          width: 40px;
+          height: 40px;
+     }
+     .glass-navbar{
+          padding:5px 20px;
+          align-items: center;
+          border-radius: 12px;
+     }
+     .nav-item{
+          font-size: 14px;
+     }
+     .Projectdes{
+          font-size: 16px;
+     }
+     .work_heading{
+          font-size: 30px;
+     }
+     .headrole{
+          font-size: 18px;
+     }
+     .company{
+          font-size: 16px;
+     }
+     .workbanner{
+          width: 97%;
+     }
+}
+@media screen and (min-width: 1400px) {
+     .maincontainer{
+          max-width:1440px;
+          margin:auto;
+     }
+} 

@@ -1,0 +1,503 @@
+/* CSS */
+body {
+     margin: 0;
+     font-family: 'Poppins', sans-serif;
+     background: linear-gradient(to right, #e0eafc, #cfdef3);
+     min-height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: start;
+     padding-top: 60px;
+}
+
+.glass-navbar {
+     background: rgba(255, 255, 255, 0.15);
+     backdrop-filter: blur(12px);
+     -webkit-backdrop-filter: blur(12px);
+     border: 1px solid rgba(255, 255, 255, 0.2);
+     border-radius: 16px;
+     padding: 10px 30px;
+     display: flex;
+     gap: 32px;
+     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+     position: relative;
+}
+
+.nav-item {
+     position: relative;
+     color: #1f2937;
+     text-decoration: none;
+     font-size: 16px;
+     font-weight: 500;
+     padding: 10px 0;
+     transition: color 0.3s ease;
+}
+
+.nav-item::after {
+     content: '';
+     position: absolute;
+     bottom: 0;
+     left: 50%;
+     height: 2px;
+     width: 0;
+     background-color: #4f46e5;
+     transition: 0.3s ease;
+     transform: translateX(-50%);
+}
+
+.nav-item:hover,
+.nav-item.active {
+     color: #4f46e5;
+}
+
+.nav-item:hover::after,
+.nav-item.active::after {
+     width: 50%;
+}
+
+.maincontainer{
+     background-color: #FFF;
+}
+.navbardiv{
+     padding: 10px;
+}
+.NavBar {
+     display: flex;
+}
+
+ul {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     overflow: hidden;
+     color: #000;
+     width: 100%;
+     height: 50px;
+     display: flex;
+     justify-content: flex-end;
+     align-items: center;
+     padding: 0px 20%;
+     gap: 20px;
+
+}
+
+li {
+     float: left;
+     font-family: 'JosefinSans-Regular';
+}
+
+.mylogoimg{
+     width: 50px;
+     height: 50px;
+     border-radius: 6px;
+}
+.mylogodiv{
+     padding-left: 3%;
+     display: flex;
+}
+.content{
+     padding: 50px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     gap: 24px;
+     font-family: 'JosefinSans-Regular';
+     font-size: 18px;
+     line-height: 150%;
+}
+.personal{
+     width: 60%;
+}
+.MynameHead{
+     font-family: 'JosefinSans-Bold';
+     font-size: 42px;
+     font-weight: 500;
+     text-align: left;
+     padding-bottom: 24px;
+}
+.mycontent{
+     font-family: 'JosefinSans-Regular';
+     padding-bottom: 24px;
+}
+.mylocationimg{
+     width: 24px;
+     height: auto;
+}
+.mylocation{
+     display: flex;
+     padding-bottom: 20px;
+     align-items: center;
+}
+.mylocationcontent{
+     padding-left: 1%;
+     
+}
+.mysocialdiv{
+     display: flex;
+     gap: 20px;
+}
+.mysocialimg{
+     width: 20px;
+     height: auto;
+     cursor: pointer;
+}
+.myprofileimgdiv, .myprofileimgabtdiv{
+     max-width: 400px;
+     max-height: 400px;
+}
+.myprofileimg{
+     width: 100%;
+     height: auto;
+}
+.aboutheaddiv{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.abouthead{
+     font-family: 'JosefinSans-SemiBold';
+     text-align: center;
+     background-color: #808080;
+     width: auto;
+     border-radius: 6px;
+     padding: 10px;
+     color: #fff;
+     font-size: 15px;
+}
+.aboutmecontdiv{
+     padding: 50px;
+     display: flex;
+     gap: 20px;
+     justify-content: space-between;
+}
+.aboutmecontent{
+     width: 50%;
+}
+.aboutmeconthead{
+     font-family:  'JosefinSans-Bold';
+     font-size: 28px;
+     font-weight: 500;
+     padding-bottom: 10px;
+}
+.aboutmecontentpg{
+     font-family: 'JosefinSans-Regular'; 
+     font-size: 18px;
+     line-height: 150%;
+}
+.aboutmepic{
+     display: flex;
+     align-content: center;
+     align-items: center;
+     justify-content:center;
+}
+.skillsection{
+     padding-bottom: 40px;
+}
+.skillheade{
+     font-family: 'JosefinSans-Regular';
+     font-size: 34px;
+     text-align: center;
+}
+.logosize{
+     width: 50px;
+     height: auto;
+}
+.SkillList{
+     margin: auto;
+     width: 90%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 25px;
+     padding: 25px;
+}
+.footer{
+     text-align: center;
+     background-color: #2D2D2D;
+     padding-bottom: 24px;;
+}
+.footerlogo{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 10px;
+     padding-top: 24px;
+     padding-bottom: 24px;
+}
+.developer{
+     font-family: 'Poppins', sans-serif;
+     font-weight: bold;
+     font-size:20px;
+     text-transform: uppercase;
+     color: #FFFFFF;
+}
+
+.mylogoimgfooter{
+     width: 50px;
+     height: 50px;
+     border-radius: 6px;
+}
+.LinkSection{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap:50px;
+     font-family: 'SF Pro Display', 'Inter', 'Helvetica Neue', 'Segoe UI', sans-serif;
+     font-size: 16px;
+     color: #FFFFFF;
+}
+.socialmediadiv{
+     display: flex;
+     gap: 20px;
+     justify-content: center;
+     align-items: center;
+     padding-top: 24px;
+}
+.socialmedia{
+     width: 24px;
+     height: auto;
+}
+.homelink{
+     text-decoration: none;
+}
+.work{
+     text-align: center;
+     padding: 24px;
+}
+.work_heading{
+     font-family:  'JosefinSans-Bold';
+     font-size: 28px;
+     font-weight: 500;
+     padding-bottom: 10px;
+}
+.headrole{
+     font-family:  'JosefinSans-Medium';
+     font-size: 20px;
+     padding: 10px;
+}
+.company{
+     font-family:  'JosefinSans-Regular';
+     font-size: 14px;
+}
+@media screen and (max-width: 500px) {
+     .mylogoimg{
+          width: 35px;
+          height: 35px;
+     }
+     .glass-navbar{
+          padding:5px 20px;
+          align-items: center;
+          border-radius: 12px;
+     }
+     .nav-item{
+          font-size: 14px;
+     }
+     .MynameHead{
+          font-size: 30px;
+          padding-bottom: 15px;
+          background-image: url('../../../public/images/banner_one.jpg');
+          background-repeat: no-repeat;
+          background-size: contain;
+          padding: 50px 0px 98px 15px;
+          font-size: 24px;
+          color: #000;
+     }
+     .mycontent{
+          font-size: 14px;
+          line-height: 20px;
+          padding-bottom: 15px;
+          padding-top: 24px;
+     }
+     .myprofileimgdiv{
+          display: none;
+          width: 200px;
+          height: 200px;
+     }
+     .mylocationcontent{
+          font-size: 14px;
+     }
+     .mylocationimg, .mysocialimg{
+          width: 16px;
+     }
+     .mylocation{
+          padding-bottom: 10px;
+     }
+     .aboutmeconthead{
+          font-size: 24px;
+     }
+     .aboutmecontentpg{
+          font-size: 14px;
+     }
+     .logosize{
+          width: 35px;
+     }
+     .skillheade{
+          font-size: 28px;
+     }
+     .content{
+          flex-direction: column;
+          padding: 12px;
+          gap: 0px;
+     }
+     .personal{
+          width: 100%;
+     }
+     .aboutmecontdiv{
+          flex-direction: column;
+          padding: 12px;
+     }
+     .aboutmecontent{
+          width: 100%;
+     }
+     .mylogoimgfooter{
+          width: 35px;
+          height: 35px;
+     }
+     .developer{
+          font-size: 16px;
+     }
+     .LinkSection{
+          font-size: 12px;
+     }
+     .socialmedia{
+          width: 18px;
+     }
+}
+@media only screen and (min-width: 501px) and (max-width: 767px) {
+   .mylogoimg{
+          width: 35px;
+          height: 35px;
+     }
+     .glass-navbar{
+          padding:5px 20px;
+          align-items: center;
+          border-radius: 12px;
+     }
+     .nav-item{
+          font-size: 14px;
+     }
+     .MynameHead{
+          font-size: 30px;
+          padding-bottom: 15px;
+          background-image: url('../../../public/images/banner_one.jpg');
+          background-repeat: no-repeat;
+          background-size: 100%;
+          padding: 50px 0px 98px 10px;
+          font-size: 24px;
+          color: #000;
+     }
+     .mycontent{
+          font-size: 14px;
+          line-height: 20px;
+          padding-bottom: 15px;
+          padding-top: 24px;
+     }
+     .myprofileimgdiv{
+          display: none;
+          width: 200px;
+          height: 200px;
+     }
+     .mylocationcontent{
+          font-size: 14px;
+     }
+     .mylocationimg, .mysocialimg{
+          width: 16px;
+     }
+     .mylocation{
+          padding-bottom: 10px;
+     }
+     .aboutmeconthead{
+          font-size: 24px;
+     }
+     .aboutmecontentpg{
+          font-size: 14px;
+     }
+     .logosize{
+          width: 35px;
+     }
+     .skillheade{
+          font-size: 28px;
+     }
+     .content{
+          flex-direction: column;
+          padding: 24px;
+          gap: 0px;
+     }
+     .personal{
+          width: 100%;
+     }
+     .aboutmecontdiv{
+          flex-direction: column;
+          padding: 24px;
+     }
+     .aboutmecontent{
+          width: 100%;
+     }
+     .mylogoimgfooter{
+          width: 35px;
+          height: 35px;
+     }
+     .developer{
+          font-size: 16px;
+     }
+     .LinkSection{
+          font-size: 12px;
+     }
+     .socialmedia{
+          width: 18px;
+     }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+     .mylogoimg{
+          width: 40px;
+          height: 40px;
+     }
+     .glass-navbar{
+          padding:5px 20px;
+          align-items: center;
+          border-radius: 12px;
+     }
+     .nav-item{
+          font-size: 14px;
+     }
+     .MynameHead{
+          font-size: 30px;
+          padding-bottom: 15px;
+     }
+     .mycontent{
+          font-size: 14px;
+          line-height: 20px;
+          padding-bottom: 15px;
+     }
+     .myprofileimgdiv, .myprofileimgabtdiv{
+          width: 200px;
+          height: 200px;
+     }
+     .mylocationcontent{
+          font-size: 14px;
+     }
+     .mylocationimg, .mysocialimg{
+          width: 16px;
+     }
+     .mylocation{
+          padding-bottom: 15px;
+     }
+     .aboutmeconthead{
+          font-size: 24px;
+     }
+     .aboutmecontentpg{
+          font-size: 14px;
+     }
+     .logosize{
+          width: 35px;
+     }
+     .skillheade{
+          font-size: 28px;
+     }
+}
+@media screen and (min-width: 1400px) {
+     .maincontainer{
+          max-width:1440px;
+          margin:auto;
+     }
+}
