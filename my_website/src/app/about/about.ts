@@ -13,6 +13,6 @@ export class About {
       this.router.navigate(['/work']);
   }
   home(){
-      this.router.navigate(['/home']);
+      this.router.navigate(['/']);
   }
 }

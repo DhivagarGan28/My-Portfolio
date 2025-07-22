@@ -279,7 +279,21 @@ li {
      font-family:  'JosefinSans-Regular';
      font-size: 14px;
 }
+.MenuTab{
+     display: none;
+}
+.menuimg{
+     width: 50%;
+     height: auto;
+}
 @media screen and (max-width: 500px) {
+     .menuhead{
+          display: none;
+     }
+     .MenuTab{
+          display: block;
+          text-align: right;
+     }
      .mylogoimg{
           width: 35px;
           height: 35px;
@@ -288,6 +302,7 @@ li {
           padding:5px 20px;
           align-items: center;
           border-radius: 12px;
+          justify-content: space-between;
      }
      .nav-item{
           font-size: 14px;

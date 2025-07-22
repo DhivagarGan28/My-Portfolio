@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class Work {
 constructor(public router:Router){}
   Home(){
-      this.router.navigate(['/home']);
+      this.router.navigate(['/']);
     }
     about(){
       this.router.navigate(['/about']);
