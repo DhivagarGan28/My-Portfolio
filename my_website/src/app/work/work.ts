@@ -16,4 +16,7 @@ constructor(public router:Router){}
     about(){
       this.router.navigate(['/about']);
     }
+    aichat(){
+    this.router.navigate(['/aichat']);
+  }
 }

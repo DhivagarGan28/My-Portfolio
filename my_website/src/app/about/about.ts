@@ -15,4 +15,7 @@ export class About {
   home(){
       this.router.navigate(['/']);
   }
+  aichat(){
+    this.router.navigate(['/aichat']);
+  }
 }

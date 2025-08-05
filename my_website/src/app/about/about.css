@@ -28,14 +28,14 @@
      left: 50%;
      height: 2px;
      width: 0;
-     background-color: #4f46e5;
+     background-color: #2596be;
      transition: 0.3s ease;
      transform: translateX(-50%);
 }
 
 .nav-item:hover,
 .nav-item.active {
-     color: #4f46e5;
+     color: #2596be;
 }
 
 .nav-item:hover::after,

@@ -8,7 +8,6 @@
                     <li class="nav-item active">Home</li>
                     <li class="nav-item" (click)="about();">About</li>
                     <li class="nav-item" (click)="mywor()">Work</li>
-                    <li class="nav-item">Contact</li>
                </ul>
                <div class="MenuTab">
                     <img src="/images/icons8-menu-50.svg" alt="Menu" class="menuimg">
@@ -19,10 +18,13 @@
           <div class="content">
                <div class="personal">
                     <div class="MynameHead">Hi, I'm Dhivagar</div>
-                    <div class="mycontent">Motivated and detail-oriented Software Developer with 3 years of hands-on experience in building web applications using modern technologies like JavaScript, HTML/CSS, Angular and Core PHP. Strong foundation in programming concepts, problem-solving, and teamwork. Eager to grow professionally, learn new tools and frameworks, and contribute to impactful software projects. Known for writing clean, maintainable code and continuously improving through feedback and collaboration.</div>
-                    <div class="mylocation">
-                         <img src="/images/locationicon.png" alt="Location" class="mylocationimg">
-                         <div class="mylocationcontent">Nagapattinam, Tamil Nadu, India.</div>
+                    <div>
+                         I'm a passionate Software Developer based in Nagapattinam, Tamil Nadu.
+                         With over 3 years of experience, I specialize in building modern, scalable web applications using Angular, React, JavaScript, and Core PHP.
+                         I take pride in writing clean, maintainable code and designing responsive interfaces that offer seamless user experiences.
+                         <br /><br />
+                         Whether it's solving complex problems, building APIs, or optimizing UI performance,
+                         I’m always up for a challenge and continuously strive to grow in my craft.
                     </div>
                     <div class="mysocialdiv">
                          <a href="mailto:dhivagarg18@gmail.com" target="_blank">
@@ -53,8 +55,8 @@
                          <div class="aboutmeconthead">
                               Curious about me? Here you have it:
                          </div>
-                         <div class="aboutmecontentpg">
-                              I'm a passionate and results-driven Software Developer with over 3 years of experience in designing, developing, and deploying scalable web applications. Proficient in full-stack development, I specialize in technologies such as JavaScript, Angular Js. My expertise lies in building responsive user interfaces, developing RESTful APIs, and implementing efficient backend solutions. <br><br>
+                         <div class="aboutmecontentpg" >
+                              I'm a passionate and results-driven Software Developer with over 3 years of experience in designing, developing, and deploying scalable web applications. Proficient in full-stack development, I specialize in technologies such as JavaScript,  React and Angular. My expertise lies in building responsive user interfaces, developing RESTful APIs, and implementing efficient backend solutions. <br><br>
 
                               Throughout my career, I've collaborated with cross-functional teams to deliver high-quality software products that enhance user experience and meet business objectives. My problem-solving skills and attention to detail have consistently contributed to the successful completion of projects within tight deadlines. <br><br>
 
@@ -96,15 +98,18 @@
                          <span class="developer">Dhivagar</span>
                     </div>
                     <div class="LinkSection">
-                         <div>Home</div>
-                         <div>About</div>
-                         <div>Work</div>
-                         <div>Contact</div>
+                         <div class="cursor" >Home</div>
+                         <div class="cursor" (click)="about();">About</div>
+                         <div class="cursor" (click)="mywor()">Contact</div>
+                         <div class="cursor" (click)="aichat()">Work</div>
                     </div>
                     <div class="socialmediadiv">
                          <img src="/images/facebook.png" alt="facebook" class="socialmedia">
                          <img src="/images/instagram-logo.png" alt="instagram" class="socialmedia">
                     </div>
+                    <footer>
+                         © 2025 Dhivagar. All rights reserved.
+                    </footer>
                </div>
           </div>
      </div>
