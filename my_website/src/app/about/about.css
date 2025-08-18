@@ -21,7 +21,7 @@
      transition: color 0.3s ease;
 }
 
-.nav-item::after {
+.nav-item::after { 
      content: '';
      position: absolute;
      bottom: 0;
