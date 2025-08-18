@@ -17,8 +17,8 @@
      <div>
           <div class="content">
                <div class="personal">
-                    <div class="MynameHead">Hi, I'm Dhivagar</div>
-                    <div>
+                    <div class="MynameHead slide-text" [@fadeIn]>Hi, I'm Dhivagar</div>
+                    <div class="fade-up" >
                          I'm a passionate Software Developer based in Nagapattinam, Tamil Nadu.
                          With over 3 years of experience, I specialize in building modern, scalable web applications using Angular, React, JavaScript, and Core PHP.
                          I take pride in writing clean, maintainable code and designing responsive interfaces that offer seamless user experiences.
@@ -36,7 +36,7 @@
                     </div>
                </div>
                <div class="profile">
-                    <div class="myprofileimgdiv">
+                    <div class="myprofileimgdiv img-zoom">
                          <img src="/images/logo_with_name.png" alt="MY Profile" class="myprofileimg">
                     </div>
                </div>
@@ -52,7 +52,7 @@
                          </div>
                     </div>
                     <div class="aboutmecontent">
-                         <div class="aboutmeconthead">
+                         <div class="aboutmeconthead fade-upall" #fadeElement>
                               Curious about me? Here you have it:
                          </div>
                          <div class="aboutmecontentpg" >
@@ -100,15 +100,14 @@
                     <div class="LinkSection">
                          <div class="cursor" >Home</div>
                          <div class="cursor" (click)="about();">About</div>
-                         <div class="cursor" (click)="mywor()">Contact</div>
-                         <div class="cursor" (click)="aichat()">Work</div>
+                         <div class="cursor" (click)="mywor()">Work</div>
                     </div>
-                    <div class="socialmediadiv">
+                    <!-- <div class="socialmediadiv">
                          <img src="/images/facebook.png" alt="facebook" class="socialmedia">
                          <img src="/images/instagram-logo.png" alt="instagram" class="socialmedia">
-                    </div>
+                    </div> -->
                     <footer>
-                         © 2025 Dhivagar. All rights reserved.
+                         © {{currentYear}} Dhivagar. All rights reserved.
                     </footer>
                </div>
           </div>
