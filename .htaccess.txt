@@ -1,0 +1,5 @@
+RewriteEngine On
+
+# If the request is only for the root domain, redirect to /home
+RewriteCond %{REQUEST_URI} ^/$
+RewriteRule ^$ /home [L,R=301]
