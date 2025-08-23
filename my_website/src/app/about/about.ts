@@ -8,14 +8,24 @@ import { Router } from '@angular/router';
   styleUrl: './about.css'
 })
 export class About {
+  currentYear: number = new Date().getFullYear();
     constructor(public router:Router){}
-  work(){
+  mywor(){
       this.router.navigate(['/work']);
   }
-  home(){
+  Home(){
       this.router.navigate(['/']);
   }
-  aichat(){
-    this.router.navigate(['/aichat']);
+  about(){
+    this.router.navigate(['/about']);
   }
+   isMenuOpen = false;
+
+    toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+    }
+
+    closeMenu() {
+    this.isMenuOpen = false;
+    }
 }

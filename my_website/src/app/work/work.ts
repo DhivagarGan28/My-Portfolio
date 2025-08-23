@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
   styleUrl: './work.css'
 })
 export class Work {
+  currentYear: number = new Date().getFullYear();
 constructor(public router:Router){}
   Home(){
       this.router.navigate(['/']);
@@ -16,7 +17,16 @@ constructor(public router:Router){}
     about(){
       this.router.navigate(['/about']);
     }
-    aichat(){
-    this.router.navigate(['/aichat']);
+    mywor(){
+    this.router.navigate(['/work']);
   }
+  isMenuOpen = false;
+
+    toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+    }
+
+    closeMenu() {
+    this.isMenuOpen = false;
+    }
 }

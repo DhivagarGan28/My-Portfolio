@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, ElementRef, ViewChild , QueryList  } from '@angular/core';
+import { Component, AfterViewInit, ElementRef, ViewChildren , QueryList, ViewChild  } from '@angular/core';
 import { Router } from '@angular/router';
 import { trigger, transition, style, animate} from '@angular/animations';
 import { MatTooltipModule } from '@angular/material/tooltip';
@@ -9,45 +9,45 @@ import { MatTooltipModule } from '@angular/material/tooltip';
      templateUrl: './home.html',
      styleUrl: './home.css',
      animations: [
-     trigger('fadeIn', [
-          transition(':enter', [
-          style({ opacity: 0 }),
-          animate('1s ease-in', style({ opacity: 1 }))
-          ])
-     ]),
-     trigger('fadeSlideIn', [
-          transition(':enter', [ // when element is inserted (e.g. via *ngIf)
-          style({ opacity: 0, transform: 'translateY(30px)' }),
-          animate('800ms ease-out', style({ opacity: 1, transform: 'translateY(0)' }))
+          trigger('fadeIn', [
+               transition(':enter', [
+               style({ opacity: 0 }),
+               animate('1s ease-in', style({ opacity: 1 }))
+               ])
           ]),
-          transition(':leave', [ // optional: when element is removed
-          animate('600ms ease-in', style({ opacity: 0, transform: 'translateY(30px)' }))
+          trigger('fadeSlideIn', [
+               transition(':enter', [
+               style({ opacity: 0, transform: 'translateY(30px)' }),
+               animate('800ms ease-out', style({ opacity: 1, transform: 'translateY(0)' }))
+               ]),
+               transition(':leave', [
+               animate('600ms ease-in', style({ opacity: 0, transform: 'translateY(30px)' }))
+               ])
           ])
-     ])
-
      ]
+
 })
 export class Home implements AfterViewInit{
-     @ViewChild('fadeElement') fadeElement!: ElementRef;
+     @ViewChild('box1') box1!: ElementRef;
+     @ViewChild('box2') box2!: ElementRef;
+
+     showBox1 = false;
+     showBox2 = false;
 
      ngAfterViewInit() {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
+     const observer = new IntersectionObserver((entries, obs) => {
+          entries.forEach(entry => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('show'); // add animation class
-            observer.unobserve(entry.target);   // run only once
+               if (entry.target === this.box1.nativeElement) this.showBox1 = true;
+               if (entry.target === this.box2.nativeElement) this.showBox2 = true;
+               obs.unobserve(entry.target);
           }
-        });
-      },
+          });
+     }, { threshold: 0.2 });
 
-      { threshold: 0.2 } // trigger when 20% visible
-    );
-
-    observer.observe(this.fadeElement.nativeElement);
-
-
-  }
+     observer.observe(this.box1.nativeElement);
+     observer.observe(this.box2.nativeElement);
+     }
      show = true;
      toggle() { this.show = !this.show; }
 
@@ -60,8 +60,16 @@ export class Home implements AfterViewInit{
           this.router.navigate(['/about']);
      }
 
-     aichat(){
-          this.router.navigate(['/aichat']);
+     Home(){
+          this.router.navigate(['/']);
      }  
-     
+     isMenuOpen = false;
+
+     toggleMenu() {
+     this.isMenuOpen = !this.isMenuOpen;
+     }
+
+     closeMenu() {
+     this.isMenuOpen = false;
+     }
 }

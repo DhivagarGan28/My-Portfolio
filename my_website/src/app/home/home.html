@@ -6,38 +6,54 @@
                </div>
                <ul class="menuhead">
                     <li class="nav-item active">Home</li>
-                    <li class="nav-item" (click)="about();">About</li>
+                    <li class="nav-item" (click)="about()">About</li>
                     <li class="nav-item" (click)="mywor()">Work</li>
                </ul>
-               <div class="MenuTab">
+               <div class="MenuTab menu-icon" (click)="toggleMenu()">
                     <img src="/images/icons8-menu-50.svg" alt="Menu" class="menuimg">
                </div>
+               
           </nav>
+          <div class="overlay" [class.show]="isMenuOpen">
+               <div class="closemenu" (click)="closeMenu()">
+                    <img src="/images/icons8-close-50.png" alt="Menu" class="menuimg">
+               </div>
+                    <div class="overlay-content">
+                         <div class="footerlogo">
+                              <img src="images/logo.png" alt="My Logo" class="mylogoimgfooter">
+                         </div>
+                         <a (click)="Home()">Home</a>
+                         <a (click)="about()">About</a>
+                         <a (click)="mywor()">Work</a>
+
+                         <div>
+                              <footer>
+                                   © {{currentYear}}. All rights reserved.
+                              </footer> 
+                         </div>
+                    </div>
+                    
+               </div>
      </div>
      <div>
           <div class="content">
+               <div class="mainprofile img-zoom">
+                         <div class="MyProfileDiv"></div>
+                    </div>
                <div class="personal">
                     <div class="MynameHead slide-text" [@fadeIn]>Hi, I'm Dhivagar</div>
-                    <div class="fade-up" >
-                         I'm a passionate Software Developer based in Nagapattinam, Tamil Nadu.
-                         With over 3 years of experience, I specialize in building modern, scalable web applications using Angular, React, JavaScript, and Core PHP.
-                         I take pride in writing clean, maintainable code and designing responsive interfaces that offer seamless user experiences.
-                         <br /><br />
-                         Whether it's solving complex problems, building APIs, or optimizing UI performance,
-                         I’m always up for a challenge and continuously strive to grow in my craft.
+                    <div class="fade-up pt-2" >
+                         I’m a passionate Software Developer with over 3 years of experience in building modern, scalable web applications. Skilled in Angular, React, JavaScript, and Core PHP, I focus on writing clean, maintainable code and crafting responsive interfaces that deliver seamless user experiences. I enjoy solving complex problems, optimizing performance, and creating reliable digital solutions that make an impact.
                     </div>
-                    <div class="mysocialdiv">
-                         <a href="mailto:dhivagarg18@gmail.com" target="_blank">
-                              <img src="/images/icons_mail.png" alt="Mail" class="mysocialimg" title="Mail">
-                         </a>
-                         <a href="" target="_blank">
-                              <img src="/images/icons_linkedin.png" alt="LinkedIn" class="mysocialimg" title="LinkedIn">
-                         </a>
-                    </div>
+                    
                </div>
                <div class="profile">
-                    <div class="myprofileimgdiv img-zoom">
+                    <!-- <div class="myprofileimgdiv img-zoom">
                          <img src="/images/logo_with_name.png" alt="MY Profile" class="myprofileimg">
+                    </div> -->
+                    <div class="mainprofileweb img-zoom">
+                         <div class="MyProfileDivweb"></div>
+                         
                     </div>
                </div>
           </div>
@@ -52,46 +68,74 @@
                          </div>
                     </div>
                     <div class="aboutmecontent">
-                         <div class="aboutmeconthead fade-upall" #fadeElement>
+                         <div class="aboutmeconthead fade-up" #box1 [@fadeSlideIn]="showBox1 ? 'in' : 'out'"
+>
                               Curious about me? Here you have it:
                          </div>
-                         <div class="aboutmecontentpg" >
-                              I'm a passionate and results-driven Software Developer with over 3 years of experience in designing, developing, and deploying scalable web applications. Proficient in full-stack development, I specialize in technologies such as JavaScript,  React and Angular. My expertise lies in building responsive user interfaces, developing RESTful APIs, and implementing efficient backend solutions. <br><br>
-
-                              Throughout my career, I've collaborated with cross-functional teams to deliver high-quality software products that enhance user experience and meet business objectives. My problem-solving skills and attention to detail have consistently contributed to the successful completion of projects within tight deadlines. <br><br>
-
-                              I'm committed to continuous learning and staying updated with emerging technologies to drive innovation and efficiency in my work. Whether it's optimizing existing codebases or architecting new solutions, I take pride in delivering robust and maintainable software that adds value to users and stakeholders alike.
+                         <div class="aboutmecontentpg" #box2 [@fadeSlideIn]="showBox2 ? 'in' : 'out'">
+                              I’ve always been fascinated by the way technology brings ideas to life, and that curiosity has grown into a career where I get to design and build meaningful solutions every day. With a strong foundation in both front-end and back-end development, I enjoy transforming concepts into intuitive, high-performing applications that people love to use.
+                              <br><br>
+                              What inspires me most about development is the blend of creativity and logic—turning complex challenges into elegant, user-friendly experiences. I thrive in environments where I can continuously learn, collaborate with others, and push my skills to the next level.
+                              <br><br>
+                              Beyond coding, I believe in building with purpose, staying adaptable in an ever-evolving tech world, and creating solutions that truly add value. For me, software development isn’t just about writing code—it’s about making ideas real and impactful.
                          </div>
                     </div>
                </div>
           </div>
           <div>
-               <div class="skillsection">
-                    <div class="skillheade">Skills</div>
-                    <div class="SkillList">
-                         <div>
-                              <img src="/images/html-svgrepo-com.svg" alt="Html Logo" class="logosize" matTooltip="Html">
+               <div class="skills-section">
+                    <h2 class="skills-title">My Skills</h2>
+                    
+                    <div class="scroll-container">
+                    <div class="scroll-content">
+                         
+                         <div class="skill-card">
+                         <img src="/images/html-svgrepo-com.svg" alt="HTML Logo" class="skill-logo">
+                         <div class="TextContentSk">HTML5</div>
                          </div>
-                         <div>
-                              <img src="/images/css-svgrepo-com.svg" alt="CSS Logo" class="logosize" matTooltip="CSS">
+
+                         <div class="skill-card">
+                         <img src="/images/css-svgrepo-com.svg" alt="CSS Logo" class="skill-logo">
+                         <div class="TextContentSk">CSS3</div>
                          </div>
-                         <div>
-                              <img src="/images/javascript-logo-svgrepo-com.svg" alt="Javascript Logo" class="logosize" matTooltip="Javascript">
+
+                         <div class="skill-card">
+                         <img src="/images/bootstrap-logo-shadow@2x.png" alt="Angular Logo" class="skill-logo">
+                         <div class="TextContentSk">Bootstrap</div>
                          </div>
-                         <div>
-                              <img src="/images/angular-icon-svgrepo-com.svg" alt="Angular Logo" class="logosize" matTooltip="Angular">
+
+                         <div class="skill-card">
+                         <img src="/images/javascript-logo-svgrepo-com.svg" alt="JavaScript Logo" class="skill-logo">
+                         <div class="TextContentSk">JavaScript</div>
                          </div>
-                         <div>
-                              <img src="/images/php-svgrepo-com.svg" alt="Php Logo" class="logosize" matTooltip="PHP">
+                         <div class="skill-card">
+                         <img src="/images/physics.png" alt="Angular Logo" class="skill-logo">
+                         <div class="TextContentSk">React</div>
                          </div>
-                         <div>
-                              <img src="/images/wordpress-logo-svgrepo-com.svg" alt="Wordpress Logo" class="logosize" matTooltip="Wordpress">
+
+                         <div class="skill-card">
+                         <img src="/images/angular-icon-svgrepo-com.svg" alt="Angular Logo" class="skill-logo">
+                         <div class="TextContentSk">Angular</div>
                          </div>
-                         <div>
-                              <img src="/images/mysql-logo-svgrepo-com.svg" alt="Mysql Logo" class="logosize" matTooltip="Mysql">
+
+                         <div class="skill-card">
+                         <img src="/images/php-svgrepo-com.svg" alt="PHP Logo" class="skill-logo">
+                         <div class="TextContentSk">PHP</div>
+                         </div>
+
+                         <div class="skill-card">
+                         <img src="/images/wordpress-logo-svgrepo-com.svg" alt="WordPress Logo" class="skill-logo">
+                         <div class="TextContentSk">WordPress</div>
+                         </div>
+
+                         <div class="skill-card">
+                         <img src="/images/mysql-logo-svgrepo-com.svg" alt="MySQL Logo" class="skill-logo">
+                         <div class="TextContentSk">MySQL</div>
                          </div>
                     </div>
+                    </div>
                </div>
+
                <div class="footer">
                     <div class="footerlogo">
                          <img src="images/logo.png" alt="My Logo" class="mylogoimgfooter">
@@ -102,10 +146,14 @@
                          <div class="cursor" (click)="about();">About</div>
                          <div class="cursor" (click)="mywor()">Work</div>
                     </div>
-                    <!-- <div class="socialmediadiv">
-                         <img src="/images/facebook.png" alt="facebook" class="socialmedia">
-                         <img src="/images/instagram-logo.png" alt="instagram" class="socialmedia">
-                    </div> -->
+                    <div class="mysocialdiv">
+                         <a href="mailto:dhivagarg18@gmail.com" target="_blank">
+                              <img src="/images/icons8-mail-50.png" alt="Mail" class="mysocialimg" title="Mail">
+                         </a>
+                         <a href="https://linkedin.com/in/dhivagar-g-021189195" target="_blank">
+                              <img src="/images/icons8-linkedin-50.png" alt="LinkedIn" class="mysocialimg" title="LinkedIn">
+                         </a>
+                    </div>
                     <footer>
                          © {{currentYear}}. All rights reserved.
                     </footer>
