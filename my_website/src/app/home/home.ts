@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, ElementRef, ViewChildren , QueryList, ViewChild  } from '@angular/core';
+import { Component, AfterViewInit, ElementRef, ViewChildren , QueryList, ViewChild, Renderer2  } from '@angular/core';
 import { Router } from '@angular/router';
 import { trigger, transition, style, animate} from '@angular/animations';
 import { MatTooltipModule } from '@angular/material/tooltip';
@@ -52,7 +52,7 @@ export class Home implements AfterViewInit{
      toggle() { this.show = !this.show; }
 
      currentYear: number = new Date().getFullYear();
-     constructor(public router:Router){}
+     constructor(public router:Router, public render:Renderer2){}
      mywor(){
           this.router.navigate(['/work']);
      }
@@ -61,7 +61,7 @@ export class Home implements AfterViewInit{
      }
 
      Home(){
-          this.router.navigate(['/']);
+          window.scrollTo({ top: 0, behavior: 'smooth' });
      }  
      isMenuOpen = false;
 

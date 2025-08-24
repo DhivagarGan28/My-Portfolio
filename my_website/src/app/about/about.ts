@@ -17,7 +17,7 @@ export class About {
       this.router.navigate(['/']);
   }
   about(){
-    this.router.navigate(['/about']);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
   }
    isMenuOpen = false;
 

@@ -332,7 +332,6 @@ footer{
 .gradient-text {
   background: linear-gradient(270deg, #ff6b6b, #5f27cd, #1dd1a1);
   background-size: 600% 600%;
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradientMove 5s ease infinite;
 }
@@ -581,6 +580,20 @@ footer{
      background-size: 110% auto;
      background-position-y: 35%;
 }
+.resumeDownload{
+     text-decoration: none;
+     color: #000;
+}
+.resumeDownloadfo{
+     text-decoration: none;
+     color: #FFF;
+}
+.resumeDownload:hover{
+     color: #2596be;
+}
+.cursor{
+     cursor: pointer;
+}
 @media screen and (max-width: 500px) {
      .mainprofileweb{
           display: none;
@@ -710,10 +723,10 @@ footer{
      }
 }
 @media only screen and (min-width: 501px) and (max-width: 767px) {
-     .mainprofileweb{
+      .mainprofileweb{
           display: none;
      }
-      .mainprofile{
+     .mainprofile{
           display: block;
      }
      .scroll-content {
@@ -727,6 +740,9 @@ footer{
      100% {
      transform: translateX(-300%);
      }
+     }
+     .menuhead{
+          display: none;
      }
      .MenuTab{
           display: block;
@@ -747,12 +763,9 @@ footer{
      .MynameHead{
           font-size: 30px;
           padding-bottom: 15px;
-          background-image: url('../../../public/images/banner_one.jpg');
           background-repeat: no-repeat;
           background-size: 100%;
-          padding: 50px 0px 98px 10px;
           font-size: 24px;
-          color: #000;
      }
      .mycontent{
           font-size: 14px;
@@ -778,7 +791,7 @@ footer{
           font-size: 24px;
      }
      .aboutmecontentpg{
-          font-size: 14px;
+          font-size: 18px;
      }
      .logosize{
           width: 35px;
@@ -807,9 +820,6 @@ footer{
      }
      .developer{
           font-size: 16px;
-     }
-     .LinkSection{
-          font-size: 12px;
      }
      .socialmedia{
           width: 18px;

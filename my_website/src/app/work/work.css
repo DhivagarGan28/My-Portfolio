@@ -197,7 +197,20 @@ footer{
      flex-direction: column;
      font-size: 18px;
 }
-
+.resumeDownload{
+     text-decoration: none;
+     color: #000;
+}
+.resumeDownloadfo{
+     text-decoration: none;
+     color: #FFF;
+}
+.resumeDownload:hover{
+     color: #2596be;
+}
+.cursor{
+     cursor: pointer;
+}
 @media screen and (max-width: 500px) {
      .work{
           padding: 24px 0px 0px 0px;
@@ -241,6 +254,9 @@ footer{
      }
 }
 @media only screen and (min-width: 501px) and (max-width: 767px) {
+      .menuhead{
+          display: none;
+     }
      .MenuTab{
           display: block;
           text-align: right;
@@ -253,6 +269,7 @@ footer{
           padding:5px 20px;
           align-items: center;
           border-radius: 12px;
+          justify-content: space-between;
      }
      .nav-item{
           font-size: 14px;
@@ -261,7 +278,7 @@ footer{
           width: 95%;
      }
      .Projectdes{
-          font-size: 12px;
+          font-size: 18px;
      }
      .work_heading{
           font-size: 28px;

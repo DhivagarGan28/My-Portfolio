@@ -18,7 +18,7 @@ constructor(public router:Router){}
       this.router.navigate(['/about']);
     }
     mywor(){
-    this.router.navigate(['/work']);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
   isMenuOpen = false;
 
