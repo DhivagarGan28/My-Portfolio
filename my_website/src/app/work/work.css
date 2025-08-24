@@ -252,6 +252,9 @@ footer{
           width: 95%;
           padding: 12px 0px;
      }
+     .LinkSection{
+        font-size: 12px;
+    }
 }
 @media only screen and (min-width: 501px) and (max-width: 767px) {
       .menuhead{
@@ -289,6 +292,9 @@ footer{
      .company{
           font-size: 14px;
      }
+     .LinkSection{
+        font-size: 12px;
+    }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
      .mylogoimg{
